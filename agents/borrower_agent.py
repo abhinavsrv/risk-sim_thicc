@@ -1,5 +1,5 @@
-# Phase 2: Agent Design - Borrower Agent
-# This file will contain the implementation of the Borrower Agent.
+# Phase 2: Agent Design - The Borrower Agent
+# This file contains the implementation of the borrower agent.
 
 import numpy as np
 import random
@@ -82,15 +82,15 @@ class BorrowerAgent:
                     print(f"Time {self.market_env.env.now}: Borrower {self.agent_id} fully repaid loan {loan_id}.")
                 break
 
-# Example usage (will be integrated into the main simulation)
+# Example usage Case (will be integrated into the main simulation)
 if __name__ == "__main__":
     import simpy
     import random
-    # A mock market environment for standalone testing
+    # Mock Market Env, for standalone testing
     class MockMarketEnv:
         def __init__(self):
             self.env = simpy.Environment()
-            self.now = self.env.now # for direct access in agent
+            self.now = self.env.now # for the purpose of direct access in agent
         def get_state_variables(self):
             return {"time": self.env.now, "interest_rate": 0.05, "market_volatility": random.uniform(0.05, 0.2)}
         def borrower_request_loan(self, borrower_id, amount, collateral_type, collateral_amount):
@@ -109,11 +109,11 @@ if __name__ == "__main__":
             action_decision = borrower.decide_action()
             if action_decision:
                 print(f"Time {env.now}: Borrower {borrower.get_id()} decided: {action_decision}")
-            # Simulate loan approval for testing
+            # (Testing) Simulating Loan Approval
             if action_decision and action_decision[0] == "request_loan":
                  borrower.receive_loan_approval({"loan_id": f"L{env.now}", "amount": action_decision[1], "remaining_balance": action_decision[1]})
             yield env.timeout(1)
-            mock_market.now = env.now # Update mock market time
+            mock_market.now = env.now # Changing/Updating Mock Market Timings
 
     mock_market.env.process(test_borrower_proc(mock_market.env, borrower1))
     mock_market.env.run(until=10)
