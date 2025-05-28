@@ -2,7 +2,7 @@
 
 I'm excited to announce the successful development and deployment of Risk Simulator, a comprehensive analytics platform designed to transform how financial institutions assess credit risk, optimize portfolios, and simulate market conditions.
 
-As the lead developer for this project, I've engineered a robust solution that merges cutting-edge machine learning with advanced financial modeling to deliver actionable insights for risk management professionals.
+Risk Simulator is a comprehensive analytics platform for financial risk assessment and portfolio optimization. This enterprise-grade solution combines advanced simulation, machine learning, and portfolio theory to provide actionable insights for financial institutions.
 
 ✅ Core Features (Now Live):
 
@@ -18,9 +18,14 @@ Implements Markowitz Mean-Variance Optimization and Conditional Value at Risk (C
 🔍 Interactive Analytics Dashboard
 Provides a sleek, enterprise-grade interface for exploring risk models, optimizing portfolios, and running market simulations with real-time visualization.
 
-⚙️ Tech Stack:
+⚙️ Technology Stack:
 
-Python | SimPy | XGBoost | SHAP | CVXPY | Plotly.js | D3.js | HTML5/CSS3 | JavaScript | Pandas | NumPy
+Simulation: SimPy, NumPy, Pandas
+Machine Learning: XGBoost, Scikit-learn, SHAP
+Portfolio Optimization: CVXPY, SciPy
+Visualization: Plotly.js, D3.js
+Frontend: HTML5, CSS3, JavaScript
+Data Processing: Pandas, NumPy
 
 Risk Simulator represents the intersection of quantitative finance and modern software engineering—delivering institutional-grade analytics with the polish and usability of consumer applications.
 
